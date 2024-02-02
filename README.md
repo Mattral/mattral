@@ -82,7 +82,7 @@
 ![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
 
 <center>
-    <img align="center" alt="snek" src="https://github.com/mattral/arpy8/blob/output/github-contribution-grid-snake-dark.svg" />
+    <img align="center" alt="snek" src="https://github.com/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
 </center>
 
 <img src="profile-3d-contrib/profile-night-view.svg" alt="contribution-graph-3d" width="100%">

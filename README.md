@@ -72,7 +72,7 @@
             <p><img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark" alt="mattral"/></p>
         </th>
         <th>
-            <p><img align="center" src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="arpy8" /></p>
+            <p><img align="center" src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="mattral" /></p>
         </th>
     </tr>
 </table>

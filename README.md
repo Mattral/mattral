@@ -38,6 +38,7 @@
                 <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="35" height="35">
                 <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pyTorch" width="35" height="35">
                 <img src="https://mlflow.org/img/mlflow-black.svg" alt="MLflow" width="35" height="35">
+                <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2023/07/langchain3.png" alt="LangChain" width="35" height="35">
                 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="35" height="35">
                 <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="35" height="35">
 <!--                 <br> -->

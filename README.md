@@ -27,7 +27,6 @@
                 <a href="https://linkedin.com/in/min-htet-myet" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="arpit-sengar-924669235" height="35" width="35" /></a>
                 <a href="https://www.hackerrank.com/mattral" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="arpy8" height="35" width="35" /></a>
                 <a href="https://kaggle.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" alt="arpitsengar" height="35" width="35" /></a>
-                <a href="https://twitter.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="arpitwastaken" height="35" width="35" /></a>
                 <a href="https://instagram.com/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="4rpi8" height="35" width="35" /></a>
             </p>
             <h3>Languages and Tools:</h3>

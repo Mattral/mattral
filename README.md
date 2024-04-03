@@ -2,6 +2,8 @@
     src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=mattral" 
     />
 
+<codersrank-summary username="mattral"></codersrank-summary>
+
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
 
 

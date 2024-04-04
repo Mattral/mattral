@@ -1,5 +1,5 @@
 <img 
-    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=mattral&badges=3&show-avatar=true&style=--header-bg-color:%23000;--border-radius:10px" 
+    src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=mattral" 
     />
 
 <codersrank-summary username="mattral"></codersrank-summary>

@@ -1,5 +1,5 @@
 <img
-  src="https://cr-ss-service.azurewebsites.net/api/ScreenShot?widget=summary&username=mattral"
+  src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile"
 />
 
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
@@ -78,8 +78,6 @@
 
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
-
-![Mattral's GitHub stats](https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=radical&rank_icon	=percentile)
 
 
 <center>

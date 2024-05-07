@@ -75,9 +75,12 @@
 </table>
 
 <br>
-![Mattral's GitHub stats](https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=radical&rank_icon	=percentile)
+
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
+
+![Mattral's GitHub stats](https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=radical&rank_icon	=percentile)
+
 
 <center>
     <img align="center" alt="snek" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />

@@ -1,4 +1,4 @@
-<img
+<img align="center"
   src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile"
 />
 

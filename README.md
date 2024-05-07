@@ -66,7 +66,7 @@
 <table>
     <tr>
         <th>
-            <p><img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark&rank_icon=percentile" alt="mattral"/></p>
+            <p><img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark" alt="mattral"/></p>
         </th>
         <th>
             <p><img align="center" src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="mattral" /></p>
@@ -75,7 +75,7 @@
 </table>
 
 <br>
-
+![Mattral's GitHub stats](https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=radical&rank_icon	=percentile)
 
 ![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
 

@@ -45,7 +45,7 @@
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="35" height="35">
                 <br>
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="35" height="35">
-                <img src="https://logosandtypes.com/wp-content/uploads/2020/07/kafka.svg" alt="kafka" width="35" height="35">
+                <img src="https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Kafka.component.complex-narrative-xl.ts=1689364296467.png/content/adobe-cms/us/en/products/instana/supported-technologies/apache-kafka-observability/_jcr_content/root/table_of_contents/body/content_section_styled/content-section-body/complex_narrative/logoimage" alt="kafka" width="35" height="35">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="35" height="35">
                 <img src="https://www.imsl.com/sites/default/files/image/2020-04/image-blog-using-jmsl-in-apache-spark.jpg" alt="Spark" width="35" height="35">
                 <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="35" height="35">

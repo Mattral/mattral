@@ -2,7 +2,6 @@
 
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
 
-
 <table>
     <tr>
         <th width="1000px" align="center">

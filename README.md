@@ -1,11 +1,13 @@
-<div style="display: flex; justify-content: center; align-items: center;">
-    <div>
-        <img align="center" src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile" />
-    </div>
-    <div>
-        <img align="center" src="https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku" />
-    </div>
-</div>
+<table>
+    <tr>
+        <td>
+            <img align="center" src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile"/>
+        </td>
+        <td>
+            <img align="center" src="https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku"/>
+        </td>
+    </tr>
+</table>
 
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
 

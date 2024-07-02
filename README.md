@@ -1,5 +1,7 @@
 <img align="center" src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile"/>
 
+![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
+
 <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
 
 <table>
@@ -74,7 +76,7 @@
 <br>
 
 
-![LeetCode Stats](https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku)
+
 
 
 <center>

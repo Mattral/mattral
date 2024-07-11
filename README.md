@@ -58,7 +58,6 @@
 <!--                 <br> -->
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="35" height="35">
                 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="35" height="35">
-                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="35" height="35">
                 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="35" height="35"> 
                 <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="35" height="35">
 <!--                 <br> -->

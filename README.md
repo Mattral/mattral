@@ -22,11 +22,11 @@
                 I -
                 <ul align="left">
                     <li>am specialized in Computer Vision and NLP</li> 
-                    <li>often spend time studying core concepts of  ML,<br> data science, Statistics and AI.</li>
+                    <li>often spend time studying core concepts of  ML,<br> Data Science, Statistics and Robotics.</li>
                     <li>try to expand my skill tree as much as I can.</li>
                     <li>cannot function without a good cup of Mocha in the morning.</li> 
                     <li>enjoy studying, travelling and being creative.</li>
-                    <li>( Reload the page if the animations below are not playing )</li>
+                    <li>I love Robotics so much despite not working in that field.</li>
                 </ul>
             </p>
             <h3>Connect with me:</h3>

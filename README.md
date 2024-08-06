@@ -25,7 +25,7 @@
                     <li>often spend time studying core concepts of  ML,<br> Data Science, Statistics and Robotics.</li>
                     <li>try to expand my skill tree as much as I can.</li>
                     <li>cannot function without a good cup of Mocha in the morning.</li> 
-                    <li>enjoy studying, travelling and being creative.</li>
+                    <li>enjoy being endlessly curious, travelling and being creative.</li>
                     <li>I love Robotics so much despite not working in that field.</li>
                 </ul>
             </p>

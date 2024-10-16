@@ -26,7 +26,7 @@
                     <li>cannot function without a good cup of Mocha in the morning.</li> 
                     <li>enjoy being endlessly curious, travelling and being creative.</li>
                     <li>I adore Robotics despite not working in that Area</li>
-                    <li>and usually like to keeo my life private</li>
+                    <li>and usually like to keep my life private</li>
                 </ul>
             </p>
             <h3>Connect with me:</h3>

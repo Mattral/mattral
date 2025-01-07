@@ -3,10 +3,10 @@
 <table>
     <tr>
         <td>
-            <img align="center" src="https://github-readme-stats.vercel.app/api?username=TreatmentFailure500&show_icons=true&theme=tokyonight&rank_icon=percentile"/>
+            <img align="center" src="https://github-readme-stats.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight&rank_icon=percentile"/>
         </td>
         <td>
-            <img align="center" src="https://leetcard.jacoblin.cool/mattral?theme=dark&font=Yuji%20Syuku"/>
+            <img align="center" src="https://leetcard.jacoblin.cool/TreatmentFailure500?theme=dark&font=Yuji%20Syuku"/>
         </td>
     </tr>
 </table>

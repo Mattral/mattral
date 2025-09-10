@@ -29,6 +29,7 @@
                     <li>enjoy being endlessly curious, travelling and being creative.</li>
                     <li>I adore Robotics despite not working in that Area</li>
                     <li>and usually like to keep my life private</li>
+                    <li>currently not into opensource as I am working on propriety</li>
                 </ul>
             </p>
             <h3>Connect with me:</h3>

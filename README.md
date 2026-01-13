@@ -4,7 +4,7 @@
 
 **Building systems that see and understand**
 
-*ML Engineer · Computer Vision · NLP · Sometimes human*
+*ML Engineer · Computer Vision · NLP · Part-time human*
 
 <br>
 
@@ -34,26 +34,28 @@ My work lives in two worlds:
 the clean abstractions of mathematics,  
 and the messy reality of production systems.
 
-> *Existential crisis optional but often included.*
+**Current state of affairs:**  
+Building proprietary systems by day,  
+exploring open questions by night.  
+*(GitHub activity is the calm between storms)*
 
 <br>
 
-**Some truths:**
-- I believe in **elegant systems** over clever hacks
-- Morning ritual: coffee, ambient music, checking model metrics
+**Some truths, in no particular order:**
+- Morning ritual: coffee, ambient music, checking if the model converged
+- Believe in **elegant systems** over clever hacks
 - Forever fascinated by how machines learn to see
-- Currently exploring the space between robotics and perception
+- Existential crisis: optional but often included
 - Keep my life private, my code public, and my commits clean
+- Currently more active in proprietary realms than GitHub's public squares
 
 ---
 
 ## 🛠 Tools of the trade
 
-*Selected with intention, mastered with time.*
+*Selected with intention, used with purpose.*
 
-<table>
-<tr>
-<td width="50%">
+<div align="center">
 
 ### **Perception & Intelligence**
 <div>
@@ -65,6 +67,8 @@ and the messy reality of production systems.
 <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2023/07/langchain3.png" width="35" height="35" />
 </div>
 
+<br>
+
 ### **Infrastructure & Scale**
 <div>
 <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" width="35" height="35" />
@@ -73,8 +77,7 @@ and the messy reality of production systems.
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" width="35" height="35" />
 </div>
 
-</td>
-<td width="50%">
+<br>
 
 ### **Data & Systems**
 <div>
@@ -84,6 +87,8 @@ and the messy reality of production systems.
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="35" height="35" />
 </div>
 
+<br>
+
 ### **Craftsmanship**
 <div>
 <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="35" height="35" />
@@ -92,9 +97,7 @@ and the messy reality of production systems.
 <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" width="35" height="35" />
 </div>
 
-</td>
-</tr>
-</table>
+</div>
 
 <br>
 
@@ -142,20 +145,24 @@ and the messy reality of production systems.
 
 ## 📊 Rhythm & motion
 
+*The quiet work behind the scenes.*
+
+<div align="center">
+
 <table>
   <tr>
-    <th>
+    <td>
       <p><img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark" alt="mattral"/></p>
-    </th>
-    <th>
+    </td>
+    <td>
       <p><img align="center" src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="mattral" /></p>
-    </th>
+    </td>
   </tr>
 </table>
 
 <br>
 
-<div align="center">
+<div>
   <img align="center" alt="snek" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
 </div>
 
@@ -175,11 +182,19 @@ and the messy reality of production systems.
 
 <img align="center" src="assets/banner3.gif" alt="banner">
 
+</div>
+
 ---
 
 <div align="center">
   
 *Where mathematics meets the machine,  
 and curiosity meets code.*
+
+<br>
+
+> *"Most of my interesting work happens in private repositories.  
+> Consider this GitHub the quiet cafe where I work on side projects  
+> when the proprietary systems are sleeping."*
 
 </div>

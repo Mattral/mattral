@@ -67,7 +67,12 @@
             </p>
         </th>
         <th width="800px">        
-            <img src="https://miro.medium.com/v2/resize:fit:800/1*ubde-Fkr9MeohJo0EuqQNQ.gif">
+         <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false"> 
+                <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false"> 
+            </a>
+<!--             <a href="https://www.last.fm/user/arpy8">
+                <img src="https://dynamic-readme-api.vercel.app/spotify_banner" alt="spotify scrobbles banner">
+            </a> -->
         </th>
     </tr>
 </table>

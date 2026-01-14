@@ -180,7 +180,7 @@ exploring open questions by night.
 
 <br>
 
-<img align="center" src="assets/banner3.gif" alt="banner">
+<img align="center" src="assets/NASAARTEMIS.png" alt="banner">
 
 </div>
 

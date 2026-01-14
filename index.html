@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Global Premium Styles */
+:root {
+  --primary: #0a0a0a;
+  --secondary: #121212;
+  --accent: #00d4ff;
+  --text: #f0f0f0;
+  --text-secondary: #888;
+  --glow: rgba(0, 212, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, var(--glow) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 0, 212, 0.05) 0%, transparent 50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Premium Header with Cinematic Entrance */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    rgba(0,0,0,0.95) 0%,
+    rgba(10,10,30,0.9) 50%,
+    rgba(0,0,0,0.95) 100%);
+  z-index: -1;
+}
+
+.glowing-orb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  filter: blur(60px);
+  opacity: 0.2;
+  animation: float 20s infinite ease-in-out;
+}
+
+.glowing-orb:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.glowing-orb:nth-child(2) {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.name-title {
+  font-size: 4.5rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% { filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.3)); }
+  100% { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.6)); }
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--text);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.scroll-hint:hover {
+  opacity: 1;
+}
+
+.scroll-line {
+  width: 2px;
+  height: 40px;
+  background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+  animation: scrollPulse 2s infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { height: 40px; opacity: 0.5; }
+  50% { height: 60px; opacity: 1; }
+}
+
+/* Stats Section with Hover Effects */
+.stats-section {
+  padding: 6rem 2rem;
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    transparent 0%,
+    rgba(0, 212, 255, 0.05) 50%,
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+.stat-card:hover::before {
+  opacity: 1;
+}
+
+/* Projects Gallery */
+.projects-section {
+  padding: 6rem 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    transparent 30%,
+    rgba(0, 212, 255, 0.1) 50%,
+    transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.project-card:hover::before {
+  transform: translateX(100%);
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+}
+
+.project-content {
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.project-link:hover {
+  background: var(--accent);
+  transform: translateX(5px);
+}
+
+/* Tools Grid */
+.tools-section {
+  padding: 6rem 2rem;
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 3rem auto;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.tool-item:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-5px) scale(1.1);
+}
+
+.tool-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+}
+
+.tool-item:hover .tool-icon {
+  filter: grayscale(0);
+}
+
+.tool-name {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.contact-link {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--accent), #ff00ff);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contact-link:hover::before {
+  opacity: 1;
+}
+
+.contact-link img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.contact-link:hover img {
+  transform: scale(1.2);
+}
+
+/* Activity Visualization */
+.activity-section {
+  padding: 6rem 2rem;
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activity-card {
+  background: rgba(20, 20, 30, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.activity-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+}
+
+/* Typewriter Effect */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--accent);
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent) }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .name-title {
+    font-size: 2.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+  
+  .contact-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Parallax Scrolling Effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Loading Animation */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-out 2s forwards;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
+.loading-bar {
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  animation: loading 2s ease-in-out;
+}
+
+@keyframes loading {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+</style>
+</head>
+<body>
+<!-- Loading Screen -->
+<div class="loader">
+  <div class="loader-content">
+    <div class="loading-text">Initializing Premium Experience</div>
+    <div class="loading-bar"></div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section parallax">
+  <div class="hero-bg"></div>
+  <div class="glowing-orb"></div>
+  <div class="glowing-orb"></div>
+  
+  <div class="hero-content">
+    <h1 class="name-title">MATTRAL</h1>
+    <div class="subtitle">Machine Learning Engineer • Vision & Language</div>
+    <div class="tagline typewriter">
+      Building systems that see, understand, and sometimes wonder about existence
+    </div>
+    
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Explore</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <h2 class="section-title">Digital Footprint</h2>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <img src="https://github-readme-stats-fast.vercel.app/api?username=mattral&show_icons=true&theme=tokyonight" alt="GitHub Stats" style="width:100%;">
+    </div>
+    <div class="stat-card">
+      <img src="https://leetcard.jacoblin.cool/TreatmentFailure500?theme=dark&font=Yuji%20Syuku" alt="LeetCode Stats" style="width:100%;">
+    </div>
+    <div class="stat-card">
+      <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=7&theme=onedark" alt="GitHub Trophies" style="width:100%;">
+    </div>
+  </div>
+</section>
+
+<!-- Philosophical Statement -->
+<section class="projects-section">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 1.8rem; margin-bottom: 2rem; font-weight: 300; line-height: 1.6;">
+      "I build in two worlds:<br>
+      <span style="color: var(--accent);">The pristine mathematics of machine learning</span><br>
+      and the <span style="color: var(--accent);">messy reality of production systems</span>.<br>
+      Between them, I find meaning."
+    </h2>
+    <p style="color: var(--text-secondary); font-style: italic;">
+      Most work lives behind corporate firewalls. This space is for exploration.
+    </p>
+  </div>
+</section>
+
+<!-- Featured Projects -->
+<section class="projects-section" style="background: rgba(10,10,10,0.8);">
+  <h2 class="section-title">Explorations & Experiments</h2>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Neural Network Visualizer</h3>
+        <p class="project-description">Understanding how neural networks learn through real-time visualization of activations and gradients.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">TensorFlow.js</span>
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+        <a href="https://neural-network-visualizer-virid.vercel.app/" class="project-link">Explore ↗</a>
+      </div>
+    </div>
+    
+    <!-- Project 2 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Robotic Arm Simulator</h3>
+        <p class="project-description">Forward and inverse kinematics simulation of a 6-DOF robotic arm with interactive controls.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Physics Engine</span>
+        </div>
+        <a href="https://robo-arm-navigator-x.vercel.app/" class="project-link">Explore ↗</a>
+      </div>
+    </div>
+    
+    <!-- Project 3 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Explainable AI Studio</h3>
+        <p class="project-description">Interactive exploration of model decisions with LIME, SHAP, and saliency map visualizations.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">TypeScript</span>
+          <span class="tech-tag">TensorFlow.js</span>
+          <span class="tech-tag">React</span>
+        </div>
+        <a href="https://xai-insight-lab.vercel.app/" class="project-link">Explore ↗</a>
+      </div>
+    </div>
+    
+    <!-- Project 4 -->
+    <div class="project-card">
+      <div class="project-content">
+        <h3 class="project-title">Simulated Self</h3>
+        <p class="project-description">Real-time human-robot interaction through pose mirroring and gesture interpretation.</p>
+        <div class="tech-tags">
+          <span class="tech-tag">Three.js</span>
+          <span class="tech-tag">MediaPipe</span>
+          <span class="tech-tag">TensorFlow</span>
+        </div>
+        <a href="https://simulated-self-human-robot-interact.vercel.app/" class="project-link">Explore ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tools Section -->
+<section class="tools-section">
+  <h2 class="section-title">Tools of the Trade</h2>
+  <div class="tools-grid">
+    <!-- ML/AI -->
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=pytorch" class="tool-icon" alt="PyTorch">
+      <span class="tool-name">PyTorch</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=tensorflow" class="tool-icon" alt="TensorFlow">
+      <span class="tool-name">TensorFlow</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=opencv" class="tool-icon" alt="OpenCV">
+      <span class="tool-name">OpenCV</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://cdn.simpleicons.org/mlflow/0194E2" class="tool-icon" alt="MLflow">
+      <span class="tool-name">MLflow</span>
+    </div>
+    
+    <!-- Cloud -->
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=aws" class="tool-icon" alt="AWS">
+      <span class="tool-name">AWS</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=azure" class="tool-icon" alt="Azure">
+      <span class="tool-name">Azure</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=docker" class="tool-icon" alt="Docker">
+      <span class="tool-name">Docker</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=kubernetes" class="tool-icon" alt="Kubernetes">
+      <span class="tool-name">K8s</span>
+    </div>
+    
+    <!-- Languages -->
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=py" class="tool-icon" alt="Python">
+      <span class="tool-name">Python</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=ts" class="tool-icon" alt="TypeScript">
+      <span class="tool-name">TypeScript</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=cpp" class="tool-icon" alt="C++">
+      <span class="tool-name">C++</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=rust" class="tool-icon" alt="Rust">
+      <span class="tool-name">Rust</span>
+    </div>
+    
+    <!-- Databases -->
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=postgres" class="tool-icon" alt="PostgreSQL">
+      <span class="tool-name">PostgreSQL</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=mongodb" class="tool-icon" alt="MongoDB">
+      <span class="tool-name">MongoDB</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=kafka" class="tool-icon" alt="Kafka">
+      <span class="tool-name">Kafka</span>
+    </div>
+    <div class="tool-item">
+      <img src="https://skillicons.dev/icons?i=redis" class="tool-icon" alt="Redis">
+      <span class="tool-name">Redis</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <h2 class="section-title">Connect</h2>
+  <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 2rem; line-height: 1.6;">
+    For thoughtful conversations about machine learning, robotics, or the existential questions of building intelligent systems.
+  </p>
+  <div class="contact-links">
+    <a href="mailto:mattralminn@gmail.com" class="contact-link">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email">
+    </a>
+    <a href="https://linkedin.com/in/min-htet-myet" class="contact-link">
+      <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn">
+    </a>
+    <a href="https://www.hackerrank.com/mattral" class="contact-link">
+      <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="HackerRank">
+    </a>
+  </div>
+</section>
+
+<!-- Activity Visualizations -->
+<section class="activity-section">
+  <h2 class="section-title">Activity & Rhythm</h2>
+  <div class="activity-grid">
+    <div class="activity-card">
+      <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false" alt="Spotify" style="width:100%;">
+    </div>
+    <div class="activity-card">
+      <img src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" alt="Contribution Snake" style="width:100%;">
+    </div>
+  </div>
+  
+  <div class="activity-grid" style="margin-top: 2rem;">
+    <div class="activity-card">
+      <img src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark" alt="GitHub Stats 2" style="width:100%;">
+    </div>
+    <div class="activity-card">
+      <img src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="Streak Stats" style="width:100%;">
+    </div>
+  </div>
+  
+  <div class="activity-grid" style="margin-top: 2rem;">
+    <div class="activity-card">
+      <img src="https://github-readme-activity-graph.vercel.app/graph?username=mattral&bg_color=12111d&color=ffffff&line=1055e0&point=00ff11&area=true&hide_border=true" alt="Activity Graph" style="width:100%;">
+    </div>
+    <div class="activity-card">
+      <img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=mattral" alt="Skills Chart" style="width:100%;">
+    </div>
+  </div>
+</section>
+
+<!-- Final Quote -->
+<section style="padding: 6rem 2rem; text-align: center; background: linear-gradient(45deg, #000, #0a0a2a, #000);">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <h2 style="font-size: 2rem; margin-bottom: 2rem; font-weight: 300;">
+      "We don't build systems to replace humans.<br>
+      We build them to understand what makes us human."
+    </h2>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 3rem;">
+      <div style="width: 30px; height: 1px; background: var(--accent);"></div>
+      <span style="color: var(--text-secondary); font-size: 0.9rem;">MATTRAL</span>
+      <div style="width: 30px; height: 1px; background: var(--accent);"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Background Music Player (Optional - can be commented out) -->
+<div style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; opacity: 0.3; transition: opacity 0.3s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.3'">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1EIVKq0C1qHJ7w?utm_source=generator&theme=0" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<script>
+// Parallax effect on scroll
+window.addEventListener('scroll', function() {
+  const scrolled = window.pageYOffset;
+  const parallax = document.querySelector('.parallax');
+  parallax.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+});
+
+// Fade in elements on scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach((section) => {
+  section.style.opacity = '0';
+  section.style.transform = 'translateY(20px)';
+  section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(section);
+});
+
+// Remove loader after page loads
+window.addEventListener('load', function() {
+  const loader = document.querySelector('.loader');
+  setTimeout(() => {
+    loader.style.display = 'none';
+  }, 2500);
+});
+
+// Add subtle cursor trail effect
+document.addEventListener('mousemove', function(e) {
+  const cursorTrail = document.createElement('div');
+  cursorTrail.style.position = 'fixed';
+  cursorTrail.style.left = e.clientX + 'px';
+  cursorTrail.style.top = e.clientY + 'px';
+  cursorTrail.style.width = '5px';
+  cursorTrail.style.height = '5px';
+  cursorTrail.style.background = 'rgba(0, 212, 255, 0.3)';
+  cursorTrail.style.borderRadius = '50%';
+  cursorTrail.style.pointerEvents = 'none';
+  cursorTrail.style.zIndex = '9999';
+  document.body.appendChild(cursorTrail);
+  
+  setTimeout(() => {
+    cursorTrail.style.opacity = '0';
+    cursorTrail.style.transform = 'scale(2)';
+    setTimeout(() => {
+      document.body.removeChild(cursorTrail);
+    }, 300);
+  }, 50);
+});
+</script>
+</body>
+</html>

@@ -4,7 +4,7 @@
 
 **Building systems that see and understand**
 
-*ML Engineer · Computer Vision · NLP · Part-time human*
+*ML Engineer · Computer Vision · NLP · Part-time human being*
 
 <br>
 

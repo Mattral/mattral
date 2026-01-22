@@ -111,7 +111,7 @@ exploring open questions by night.
 <a href="mailto:mattralminn@gmail.com" target="blank">
   <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png" height="35" width="35" />
 </a>
-<a href="https://linkedin.com/in/min-htet-myet" target="blank">
+<a href="https://linkedin.com/in/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="35" width="35" />
 </a>
 <a href="https://www.hackerrank.com/mattral" target="blank">

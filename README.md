@@ -72,10 +72,12 @@ exploring open questions by night.
 
 ### **Infrastructure & Scale**
 <div>
-<img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" width="35" height="35" />
+<img src="https://cdn.worldvectorlogo.com/logos/fastapi.svg" width="35" height="35" />
 <img src="https://e7.pngegg.com/pngimages/630/547/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png" width="35" height="35" />
-<img src="https://www.imsl.com/sites/default/files/image/2020-04/image-blog-using-jmsl-in-apache-spark.jpg" width="35" height="35" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" width="35" height="35" />
+<img src="https://crow.sg/blog/spark.webp" width="35" height="35" />
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWaFEEhdbSquCHbTCflsXz-LaTzvxpnPNhQ&s" width="35" height="35" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png" width="35" height="35" />
+<img src="https://us1.discourse-cdn.com/flex020/uploads/ray/original/1X/8f4dcb72f7cd34e2a332d548bd65860994bc8ff1.png" width="35" height="35" />
 </div>
 
 <br>
@@ -84,8 +86,11 @@ exploring open questions by night.
 <div>
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" width="35" height="35" />
 <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="35" height="35" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="35" height="35" />
+<img src="https://images.seeklogo.com/logo-png/48/1/mongodb-logo-png_seeklogo-481256.png" width="35" height="35" />
+<img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/snowflake-color.png" width="35" height="35" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="35" height="35" />
+<img src=" https://images.icon-icons.com/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" width="35" height="35" />
+ 
 </div>
 
 <br>
@@ -114,11 +119,8 @@ exploring open questions by night.
 <a href="https://linkedin.com/in/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="35" width="35" />
 </a>
-<a href="https://www.hackerrank.com/mattral" target="blank">
+<a href="https://www.hackerrank.com/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" height="35" width="35" />
-</a>
-<a href="https://kaggle.com/" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" height="35" width="35" />
 </a>
 <a href="https://instagram.com/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" height="35" width="35" />

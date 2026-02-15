@@ -119,9 +119,6 @@ exploring open questions by night.
 <a href="https://linkedin.com/in/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="35" width="35" />
 </a>
-<a href="https://www.hackerrank.com/" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" height="35" width="35" />
-</a>
 <a href="https://instagram.com/" target="blank">
   <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" height="35" width="35" />
 </a>

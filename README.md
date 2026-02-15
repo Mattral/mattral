@@ -89,7 +89,7 @@ exploring open questions by night.
 <img src="https://images.seeklogo.com/logo-png/48/1/mongodb-logo-png_seeklogo-481256.png" width="35" height="35" />
 <img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/snowflake-color.png" width="35" height="35" />
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="35" height="35" />
-<img src=" https://images.icon-icons.com/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" width="35" height="35" />
+<img src="https://images.icon-icons.com/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" width="35" height="35" />
  
 </div>
 

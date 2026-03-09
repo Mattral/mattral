@@ -175,8 +175,7 @@ exploring open questions by night.
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=mattral&bg_color=12111d&color=ffffff&line=1055e0&point=00ff11&area=true&hide_border=true" alt="contribution-graph" width="100%">
 
 <br>
-
-<img src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=mattral" alt="activity-graph" width="100%">
+<img align="center" src="assets/NASAARTEMIS.png" alt="banner">
 
 <br>
 

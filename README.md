@@ -179,7 +179,7 @@ exploring open questions by night.
 
 <br>
 
-<img align="center" src="assets/NASAARTEMIS.png" alt="banner">
+<img align="center" src="assets/onlyWish.jpg" alt="banner">
 
 </div>
 

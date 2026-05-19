@@ -14,7 +14,7 @@
       <img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark"/>
     </td>
     <td>
-      <img align="center" src="https://leetcard.jacoblin.cool/TreatmentFailure500?theme=dark&font=Yuji%20Syuku"/>
+      <img align="center" src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku"/>
     </td>
   </tr>
 </table>

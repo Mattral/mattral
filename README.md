@@ -19,7 +19,7 @@
 
 I work in the gap between ML research and production engineering  -- where the math is clean and the cluster is not.
 
-Day-to-day: Propriety work, distributed training infrastructure, LLM safety systems, and the occasional Triton kernel when PyTorch decides it's done for the day. Most of my production work lives in private repos  -- this is where the side projects land.
+Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training infrastructure, LLM safety systems, and the occasional Triton kernel when PyTorch decides it's done for the day. Most of my production work lives in private repos  -- this is where the side projects land.
 
 **Things I care about technically**
 - Large-scale pre-training infrastructure  -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
@@ -76,7 +76,7 @@ Not a comprehensive list. Just what I actually reach for.
 
 ## A few honest notes
 
-Most of my interesting work happens in private repositories -- production systems at a scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
+Most of my interesting work happens in private repositories -- production systems at cloud scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
 
 That said: the repos here are held to the same standard as the private ones  -- CI, tests, type checking, real benchmarks. If something is experimental, the README says so. I'd rather write documentation that admits limitations than one that hides them.
 

@@ -164,8 +164,8 @@ I'm particularly interested in the fault-tolerance problems that only appear at 
 
 $$\mathbf{h}_t = \sigma\!\left(\mathbf{W}_h\,\mathbf{h}_{t-1} + \mathbf{W}_x\,\mathbf{x}_t + \mathbf{b}\right)$$
 
-*The idea that a machine could hold memory across time —*
-*that the past could shape the present through nothing more than a weight matrix —*
+*The idea that a machine could hold memory across time --*
+*that the past could shape the present through nothing more than a weight matrix --*
 *was the moment I understood why this field is worth a lifetime.*
 
 *The equation is simple. What it implies is not.*

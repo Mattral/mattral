@@ -76,7 +76,7 @@ Not a comprehensive list. Just what I actually reach for.
 
 ## A few honest notes
 
-Most of my interesting work happens in private repositories. I work on proprietary systems and can't always open-source what I build. This GitHub is a public window, not the full picture.
+Most of my interesting work happens in private repositories -- production systems at a scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
 
 That said: the repos here are held to the same standard as the private ones  -- CI, tests, type checking, real benchmarks. If something is experimental, the README says so. I'd rather write documentation that admits limitations than one that hides them.
 

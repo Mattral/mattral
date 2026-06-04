@@ -1,198 +1,189 @@
 <div align="center">
 
-# 🌌 Mattral
+# Mattral
 
-**Building systems that see and understand**
+**ML Engineer · Distributed Training · LLM Systems · Computer Vision**
 
-*ML Engineer · Computer Vision · NLP · Part-time human being*
+*I build things that work at scale  -- and try to understand why they work at all.*
 
 <br>
 
+[![Profile views](https://komarev.com/ghpvc/?username=mattral&color=blueviolet&style=flat-square&label=Profile+views)](https://github.com/Mattral)
+[![GitHub followers](https://img.shields.io/github/followers/mattral?style=flat-square&color=blueviolet&label=Followers)](https://github.com/Mattral?tab=followers)
+
+</div>
+
+---
+
+## What I actually do
+
+I work in the gap between ML research and production engineering  -- where the math is clean and the cluster is not.
+
+Day-to-day: Propriety work, distributed training infrastructure, LLM safety systems, and the occasional Triton kernel when PyTorch decides it's done for the day. Most of my production work lives in private repos  -- this is where the side projects land.
+
+**Things I care about technically**
+- Large-scale pre-training infrastructure  -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
+- LLM safety and observability  -- keeping models honest at inference time
+- The hardware-software boundary: SIMD, CUDA, kernel-level optimization
+- Novel architectures worth *deploying*, not just benchmarking
+
+**Things I care about less technically**
+- Code that impresses interviewers but breaks on week two
+- Benchmarks that only win on synthetic data
+- Documentation that describes the happy path and nothing else
+
+---
+
+## Selected work
+
+> Most projects here are built to solve a real problem, not to fill a portfolio.
+> I'd rather have three things that work than ten that look good.
+
+| Project | What it is | Status |
+|:---|:---|:---|
+| [Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine) | Sparse MoE training runtime  -- Triton Top-K routing, DP+EP+TP distributed, async sharded checkpointing, TorchElastic fault recovery | Active |
+| [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio) | LLM firewall  -- sub-10ms p99 inline guardrails, DistilRoBERTa + ONNX + Triton, continuous drift detection and LoRA retraining | Active |
+| [KANX](https://github.com/Mattral/KANX) | Production KAN library  -- TF + PyTorch + ONNX, Docker/K8s ready, published to PyPI | Active · `pip install kanx` |
+| [RLHF-PPO-DPO](https://github.com/Mattral/Improving-LLM-Models-with-RLHF-PPO-DPO) | Modular RLHF framework  -- PPO and DPO, reward model training, policy optimization | Active |
+| [SIMD Microkernels](https://github.com/Mattral/SIMD-Microkernels-for-ML-Workloads) | C++ AVX2 kernels for ML primitives  -- tiled GEMM, vectorized GeLU, Python bindings | Experimental |
+| [ML from scratch](https://github.com/Mattral/ML-AI-Algorithms-from-scratch) | NumPy-only implementations of supervised, unsupervised, RL, and Bayesian methods | Reference |
+
+---
+
+## Stack
+
+Not a comprehensive list. Just what I actually reach for.
+
+**Training & inference** &nbsp;
+`PyTorch` `TensorFlow` `Triton` `ONNX` `TensorRT` `FSDP2` `TorchElastic`
+
+**LLM ecosystem** &nbsp;
+`Transformers` `PEFT / LoRA` `vLLM` `LangChain` `FastAPI` `Triton Inference Server`
+
+**Distributed & infra** &nbsp;
+`NCCL` `Kubernetes` `Helm` `Terraform` `Airflow` `Ray`
+
+**Observability** &nbsp;
+`Prometheus` `Grafana` `OpenTelemetry` `Weights & Biases`
+
+**Low-level** &nbsp;
+`C++` `AVX2 / SIMD` `CUDA` `pybind11`
+
+**Data** &nbsp;
+`PostgreSQL` `Qdrant` `MongoDB` `Spark` `Dask`
+
+---
+
+## A few honest notes
+
+Most of my interesting work happens in private repositories. I work on proprietary systems and can't always open-source what I build. This GitHub is a public window, not the full picture.
+
+That said: the repos here are held to the same standard as the private ones  -- CI, tests, type checking, real benchmarks. If something is experimental, the README says so. I'd rather write documentation that admits limitations than one that hides them.
+
+I'm particularly interested in the fault-tolerance problems that only appear at real cluster scale, the latency-accuracy tradeoffs in LLM safety systems, and the open question of whether KAN-style architectures will find their niche or stay a curiosity.
+
+---
+
+## Currently
+
+- **Working on:** fixing MoE engine chaos scenario A  -- sudden node failure under expert resharding
+- **Reading:** the Megatron-LM codebase and the FlexAttention paper
+- **Thinking about:** whether MFU tracking gives you enough signal to catch silent training degradation early
+
+---
+
+## Problem-solving
+
+<div align="center">
+
 <table>
   <tr>
-    <td>
-      <img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark"/>
-    </td>
-    <td>
-      <img align="center" src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku"/>
+    <td align="center">
+      <img src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku&hide_border=true" />
     </td>
   </tr>
 </table>
 
-<p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=mattral&column=-1&theme=onedark" alt="mattral" /></p>
 
+>
+> *Algorithms are how I warm up. Systems are where I live.*
+>
+>
 </div>
 
 ---
 
-## ✨ Between the lines
-
-I build machine learning systems that bridge the gap between research and reality.  
-Specializing in **computer vision** and **language models**, I care about things that work—and work at scale.
-
-My work lives in two worlds:  
-the clean abstractions of mathematics,  
-and the messy reality of production systems.
-
-**Current state of affairs:**  
-Building proprietary systems by day,  
-exploring open questions by night.  
-*(GitHub activity is the calm between storms)*
-
-<br>
-
-**Some truths, in no particular order:**
-- Morning ritual: coffee, ambient music, checking if the model converged
-- Believe in **elegant systems** over clever hacks
-- Forever fascinated by how machines learn to see
-- Existential crisis: optional but often included
-- Keep my life private, my code public, and my commits clean
-- Currently more active in proprietary realms than GitHub's public squares
-
----
-
-## 🛠 Tools of the trade
-
-*Selected with intention, used with purpose.*
+## Stats
 
 <div align="center">
 
-### **Perception & Intelligence**
-<div>
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="35" height="35" />
-<img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" width="35" height="35" />
-<img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" width="35" height="35" />
-<img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" width="35" height="35" />
-<img src="https://mlflow.org/img/mlflow-black.svg" width="35" height="35" />
-<img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2023/07/langchain3.png" width="35" height="35" />
-</div>
-
-<br>
-
-### **Infrastructure & Scale**
-<div>
-<img src="https://cdn.worldvectorlogo.com/logos/fastapi.svg" width="35" height="35" />
-<img src="https://e7.pngegg.com/pngimages/630/547/png-clipart-kafka-vertical-logo-tech-companies-thumbnail.png" width="35" height="35" />
-<img src="https://crow.sg/blog/spark.webp" width="35" height="35" />
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeWaFEEhdbSquCHbTCflsXz-LaTzvxpnPNhQ&s" width="35" height="35" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png" width="35" height="35" />
-<img src="https://us1.discourse-cdn.com/flex020/uploads/ray/original/1X/8f4dcb72f7cd34e2a332d548bd65860994bc8ff1.png" width="35" height="35" />
-</div>
-
-<br>
-
-### **Data & Systems**
-<div>
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" width="35" height="35" />
-<img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="35" height="35" />
-<img src="https://images.seeklogo.com/logo-png/48/1/mongodb-logo-png_seeklogo-481256.png" width="35" height="35" />
-<img src="https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/dark/snowflake-color.png" width="35" height="35" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="35" height="35" />
-<img src="https://images.icon-icons.com/2415/PNG/512/postgresql_plain_wordmark_logo_icon_146390.png" width="35" height="35" />
- 
-</div>
-
-<br>
-
-### **Craftsmanship**
-<div>
-<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="35" height="35" />
-<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" width="35" height="35" />
-<img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" width="35" height="35" />
-<img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" width="35" height="35" />
-</div>
+<table>
+  <tr>
+    <td>
+      <img src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark&hide_border=true" />
+    </td>
+    <td>
+      <img src="https://streak-stats.demolab.com/?user=mattral&theme=gotham&hide_border=true" />
+    </td>
+  </tr>
+</table>
 
 </div>
-
-<br>
-
----
-
-## 🌐 Connect & context
-
-<div align="center">
-  
-<a href="mailto:mattralminn@gmail.com" target="blank">
-  <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/512px-Gmail_icon_%282020%29.svg.png" height="35" width="35" />
-</a>
-<a href="https://linkedin.com/in/" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" height="35" width="35" />
-</a>
-<a href="https://instagram.com/" target="blank">
-  <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" height="35" width="35" />
-</a>
-
-</div>
-
-<br>
 
 ---
 
 ## 🎶 Current frequency
 
 <div align="center">
-  
-<a href="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false"> 
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false"> 
+
+<a href="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false">
+  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=313hy6lpcgjlbdfxwmn4mucx576e&cover_image=true&theme=default&show_offline=false&background_color=121212&interchange=false&profanity=true&bar_color_cover=false" alt="Spotify now playing" />
 </a>
 
 </div>
 
-<br>
-
 ---
 
-## 📊 Rhythm & motion
-
-*The quiet work behind the scenes.*
+## Rhythm & motion
 
 <div align="center">
 
-<table>
-  <tr>
-    <td>
-      <p><img align="center" src="https://readmestats.999857.xyz/api?username=mattral&show_icons=true&locale=en&theme=dark" alt="mattral"/></p>
-    </td>
-    <td>
-      <p><img align="center" src="https://streak-stats.demolab.com/?user=mattral&theme=gotham" alt="mattral" /></p>
-    </td>
-  </tr>
-</table>
+<img alt="contribution snake" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
 
-<br>
+<br><br>
 
-<div>
-  <img align="center" alt="snek" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
-</div>
-
-<br>
-
-<img src="profile-3d-contrib/profile-night-view.svg" alt="contribution-graph-3d" width="100%">
-
-<br>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mattral&bg_color=12111d&color=ffffff&line=1055e0&point=00ff11&area=true&hide_border=true" alt="contribution-graph" width="100%">
-
-<br>
-<img align="center" src="assets/NASAARTEMIS.png" alt="banner">
-
-<br>
-
-<img align="center" src="assets/onlyWish.jpg" alt="banner">
+<img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />
 
 </div>
 
 ---
 
+## On the equation that changed everything
+
 <div align="center">
-  
-*Where mathematics meets the machine,  
-and curiosity meets code.*
+
+$$\mathbf{h}_t = \sigma\!\left(\mathbf{W}_h\,\mathbf{h}_{t-1} + \mathbf{W}_x\,\mathbf{x}_t + \mathbf{b}\right)$$
+
+*The idea that a machine could hold memory across time —*
+*that the past could shape the present through nothing more than a weight matrix —*
+*was the moment I understood why this field is worth a lifetime.*
+
+*The equation is simple. What it implies is not.*
+
+</div>
+
+---
+
+> Outside of work I'm usually reading something I don't fully understand yet,
+> listening to music that has no business being that good, and occasionally wondering if the model actually converged or if I just got lucky. I like working with people who say "I don't know" without embarrassment and argue about architecture in good faith.
+
+<div align="center">
+
+**[mattralminn@gmail.com](mailto:mattralminn@gmail.com)** 
 
 <br>
 
-> *"Most of my interesting work happens in private repositories.  
-> Consider this GitHub the quiet cafe where I work on side projects  
-> when the proprietary systems are sleeping."*
+*Open to interesting conversations about distributed training, LLM infrastructure,*
+*or any hard ML systems problem worth losing sleep over.*
 
 </div>

@@ -9,7 +9,6 @@
 <br>
 
 [![Profile views](https://komarev.com/ghpvc/?username=mattral&color=blueviolet&style=flat-square&label=Profile+views)](https://github.com/Mattral)
-[![GitHub followers](https://img.shields.io/github/followers/mattral?style=flat-square&color=blueviolet&label=Followers)](https://github.com/Mattral?tab=followers)
 
 </div>
 

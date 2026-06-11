@@ -17,9 +17,9 @@
 
 ## What I actually do
 
-I work in the gap between ML research and production engineering  -- where the math is clean and the cluster is not.
+I work in the space between clean research ideas and the messy reality of clusters that fail, data that drifts, and models that need to stay honest in production.
 
-Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training infrastructure, LLM safety systems, and the occasional Triton kernel when PyTorch decides it's done for the day. Most of my production work lives in private repos  -- this is where the side projects land.
+Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training systems, fault-tolerant checkpointing, LLM safety layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
 
 **Things I care about technically**
 - Large-scale pre-training infrastructure  -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
@@ -36,17 +36,17 @@ Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training
 
 ## Selected work
 
-> Most projects here are built to solve a real problem, not to fill a portfolio.
-> I'd rather have three things that work than ten that look good.
+> Most of these exist because I needed to solve something concrete.  
+> I’d rather have a few things that are real than many that just look good on a profile.
 
 | Project | What it is | Status |
-|:---|:---|:---|
-| [Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine) | Sparse MoE training runtime  -- Triton Top-K routing, DP+EP+TP distributed, async sharded checkpointing, TorchElastic fault recovery | Active |
-| [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio) | LLM firewall  -- sub-10ms p99 inline guardrails, DistilRoBERTa + ONNX + Triton, continuous drift detection and LoRA retraining | Active |
-| [KANX](https://github.com/Mattral/KANX) | Production KAN library  -- TF + PyTorch + ONNX, Docker/K8s ready, published to PyPI | Active · `pip install kanx` |
-| [RLHF-PPO-DPO](https://github.com/Mattral/Improving-LLM-Models-with-RLHF-PPO-DPO) | Modular RLHF framework  -- PPO and DPO, reward model training, policy optimization | Active |
-| [SIMD Microkernels](https://github.com/Mattral/SIMD-Microkernels-for-ML-Workloads) | C++ AVX2 kernels for ML primitives  -- tiled GEMM, vectorized GeLU, Python bindings | Experimental |
-| [ML from scratch](https://github.com/Mattral/ML-AI-Algorithms-from-scratch) | NumPy-only implementations of supervised, unsupervised, RL, and Bayesian methods | Reference |
+|---------|------------|--------|
+| [Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine) | Sparse MoE training runtime with Triton-fused Top-K routing, DP+EP+TP parallelism, async two-tier checkpointing (NVMe → S3/MinIO), and TorchElastic fault recovery. Includes chaos testing and detailed telemetry. | Active<br>Pipeline parallelism and large-scale multi-node validation still in progress |
+| [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio) | Inline LLM firewall with measured sub-10 ms p99 latency in load tests. Built with ONNX + Triton, drift detection, LoRA self-updating, and full canary deployment automation. Five documented development phases. | Active<br>Latency numbers from controlled tests; full production hardware validation ongoing |
+| [KANX](https://github.com/Mattral/KANX) | Production-grade Kolmogorov-Arnold Networks library with PyTorch + TensorFlow backends, real ONNX export, Docker + Kubernetes support, and FastAPI serving. Includes benchmarks on smooth separable tasks. | Active · `pip install kanx`<br>Paper preprint available |
+| [RLHF-PPO-DPO](https://github.com/Mattral/Improving-LLM-Models-with-RLHF-PPO-DPO) | Modular framework for full RLHF pipelines (SFT → reward modeling → PPO and DPO). Includes distributed design with ZeRO-3, async rollouts, and extensive testing. | Active<br>Validated end-to-end on single-GPU toy setups; large-scale distributed runs not yet public |
+| [FlashSpec](https://github.com/Mattral/FlashSpec) | Adaptive speculative decoding engine with online bandit draft selection and Triton-optimized verification. Includes throughput benchmarks on Llama-3 models. | Pre-alpha / Active development<br>Some CI and GPU tests currently under refactoring |
+| [RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall) | Enterprise multimodal RAG system for financial documents (text + tables + charts via GPT). Strong emphasis on async processing, retries, structured observability, and type safety. | Active<br>Finance-domain focused; detailed load benchmarks not yet public |
 
 ---
 
@@ -78,9 +78,12 @@ Not a comprehensive list. Just what I actually reach for.
 
 Most of my interesting work happens in private repositories -- production systems at cloud scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
 
-That said: the repos here are held to the same standard as the private ones  -- CI, tests, type checking, real benchmarks. If something is experimental, the README says so. I'd rather write documentation that admits limitations than one that hides them.
+That said: the repositories here are written to the same standard I use privately: tests, type checking, CI, real (if limited) benchmarks, and documentation that tries to admit what doesn’t work yet. When something is experimental or incomplete, the README says so.
 
-I'm particularly interested in the fault-tolerance problems that only appear at real cluster scale, the latency-accuracy tradeoffs in LLM safety systems, and the open question of whether KAN-style architectures will find their niche or stay a curiosity.
+I’m especially interested in the kinds of failures that only appear at real cluster scale, the practical trade-offs in LLM safety systems, and whether architectures like KANs will eventually find meaningful production use cases.
+
+My path into this work wasn’t linear. I spent time in data engineering and instrumentation before moving deeper into ML systems. That background still shapes how I think about reliability and observability.
+
 
 ---
 

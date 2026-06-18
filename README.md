@@ -152,6 +152,16 @@ My path into this work wasn’t linear. I spent time in data engineering and ins
 
 <img alt="contribution snake" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=Mattral%2FKANX%2CMattral%2FRAG-Multimodal-Financial-Doc-Analysis-and-Recall%2CMattral%2Fproduction-vlm-engineering%2CMattral%2FML-AI-Algorithms-from-scratch&type=timeline&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=Mattral/KANX%2CMattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall%2CMattral/production-vlm-engineering%2CMattral/ML-AI-Algorithms-from-scratch&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=Mattral/KANX%2CMattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall%2CMattral/production-vlm-engineering%2CMattral/ML-AI-Algorithms-from-scratch&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=Mattral/KANX%2CMattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall%2CMattral/production-vlm-engineering%2CMattral/ML-AI-Algorithms-from-scratch&type=timeline&legend=top-left" />
+ </picture>
+</a>
+
 <br><br>
 
 <img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />

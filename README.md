@@ -34,18 +34,18 @@ Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training
 ---
 
 ## Selected work
-
 > Most of these exist because I needed to solve something concrete.  
 > I’d rather have a few things that are real than many that just look good on a profile.
 
-| Project | What it is | Status |
-|---------|------------|--------|
-| [Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine) | Research-grade runtime for training large Mixture-of-Experts models. Features a fused Triton Top-K router, composable 4D parallelism (DP + EP + TP + PP), strict forward-pass invariants, elastic fault tolerance, and async two-tier checkpointing with automatic expert resharding. Includes chaos testing and detailed telemetry. | Active · [Preprint](https://doi.org/10.5281/zenodo.20647577) |
-| [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio) | Inline LLM firewall with measured low single-digit ms p99 latency in load tests. Built with ONNX + Triton, drift detection, LoRA self-updating, and automated canary deployment. | Active<br>Latency numbers from controlled tests |
-| [KANX](https://github.com/Mattral/KANX) | Production-grade Kolmogorov-Arnold Networks library with PyTorch + TensorFlow backends, verified ONNX export, Docker + Kubernetes support, and FastAPI serving. Includes benchmarks on smooth tasks. | Active · `pip install kanx` · [Preprint](https://doi.org/10.5281/zenodo.20615396) |
-| [RLHF-PPO-DPO](https://github.com/Mattral/Improving-LLM-Models-with-RLHF-PPO-DPO) | Modular framework for full RLHF pipelines (SFT → reward modeling → PPO and DPO). Includes distributed design with ZeRO-3, async rollouts, and extensive testing. | Active<br>Validated end-to-end on single-GPU setups |
-| [FlashSpec](https://github.com/Mattral/FlashSpec) | Adaptive speculative decoding engine with online bandit draft selection and Triton-optimized verification. Includes throughput benchmarks on Llama-3 models. | Active |
-| [RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall) | Multimodal RAG system for financial documents with async processing, retry logic, structured observability, and strict type safety. | Active<br>Finance-domain focused |
+| Project | What it is | Status & Artifacts |
+|---------|------------|---------------------|
+| **[Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine)** | Research-grade runtime for training large Mixture-of-Experts models at hyperscale. Fused Triton Top-K router, composable 4D parallelism (DP + EP + TP + PP), strict forward-pass invariants, elastic fault tolerance, async two-tier checkpointing with automatic expert resharding, chaos testing, and structured telemetry. | Active<br>v2 Preprint (June 2026)<br>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20688837.svg)](https://doi.org/10.5281/zenodo.20688837) |
+| **[GuardRail Studio](https://github.com/Mattral/GuardRail-Studio)** | Inline LLM firewall targeting low single-digit ms p99 latency. Built with ONNX + Triton, drift detection, LoRA self-updating, automated canary deployment, and strong observability. | Active<br>Latency numbers from controlled load tests |
+| **[guardrail-rs](https://github.com/Mattral/guardrail-rs)** | Zero-Python, production-grade LLM security layer written in Rust. Reverse-proxy that blocks prompt injection, redacts PII, and enforces policies with sub-millisecond overhead. Fails open by design, hot-reloadable config, Docker/K8s ready. | Active · v0.3.3 (June 2026)<br>Complements GuardRail Studio |
+| **[KANX](https://github.com/Mattral/KANX)** | Production-grade Kolmogorov-Arnold Networks library with PyTorch + TensorFlow backends, verified ONNX export, Docker + Kubernetes + Helm support, and FastAPI serving. | Active<br>`pip install kanx`<br>[![Downloads](https://img.shields.io/pepy/dt/kanx?style=flat&color=F87171)](https://pepy.tech/project/kanx)<br>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20615396.svg)](https://doi.org/10.5281/zenodo.20615396) |
+| **[FlashSpec](https://github.com/Mattral/FlashSpec)** | Adaptive speculative decoding engine with online bandit draft selection and Triton-optimised on-device verification. Preserves target distribution exactly. | Active<br>`pip install flashspec`<br>[![Downloads](https://img.shields.io/pepy/dt/flashspec?style=flat&color=F87171)](https://pepy.tech/project/flashspec)<br>[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20766119.svg)](https://doi.org/10.5281/zenodo.20766119) |
+| **[ReliableAgent](https://github.com/Mattral/ReliableAgent)** | Reliability-first orchestration framework for agentic systems. Plan → execute → critique → replan loop with guardrails at every boundary, full trajectory reconstruction, checkpoint/resume, and quantitative reliability metrics. | Active · v0.2.0 (June 19, 2026)<br>140 tests · Production-shaped foundations |
+| **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** | Production-grade multimodal RAG system for financial documents with hybrid retrieval, VLM chart understanding, numeric grounding, and full observability + CI-gated evaluation. | Active<br>Finance-domain focused |
 
 ---
 

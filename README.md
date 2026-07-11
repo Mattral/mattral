@@ -1,3 +1,4 @@
+
 <div align="center">
 
 # Mattral
@@ -152,10 +153,15 @@ My path into this work wasn’t linear. I spent time in data engineering and ins
 
 <img alt="contribution snake" src="https://github.com/Mattral/mattral/blob/output/github-contribution-grid-snake-dark.svg" />
 
-
 <br><br>
+| | |
+|:--:|:--:|
+| <video src="https://github.com/user-attachments/assets/0d3282d2-809f-4a47-a5c3-deb43e249453" width="480" controls loop muted playsinline></video> |<img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />|
 
-<img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />
+
+
+
+
 
 </div>
 

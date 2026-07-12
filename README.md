@@ -1,5 +1,5 @@
-
 <div align="center">
+
 
 # Mattral
 
@@ -156,7 +156,8 @@ My path into this work wasn’t linear. I spent time in data engineering and ins
 <br><br>
 | | |
 |:--:|:--:|
-| <video src="https://github.com/user-attachments/assets/0d3282d2-809f-4a47-a5c3-deb43e249453" width="480" controls loop muted playsinline></video> |<img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />|
+| <video src="https://github.com/user-attachments/assets/0aa09936-7d49-463b-8a9d-7389ad4626c3" width="480" controls loop muted playsinline></video> |<img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" />|
+<!-- https://github.com/user-attachments/assets/0d3282d2-809f-4a47-a5c3-deb43e249453 -->
 
 
 

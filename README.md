@@ -50,6 +50,16 @@ Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training
 
 ---
 
+## Selected Open Source Contributions
+
+| Project       | Status                  | What was fixed / improved                                      | Link |
+|---------------|-------------------------|----------------------------------------------------------------|------|
+| **Triton**    | Merged                  | Fixed NaN handling in `tl.argmin`/`tl.argmax` (`tie_break_left=False`) in the interpreter so it matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) |
+| **Megatron-LM** | Merged                | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) |
+| **TensorFlow** | Approved by reviewers | `tf.experimental.numpy.swapaxes` now raises clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
+
+---
+
 ## Stack
 
 Not a comprehensive list. Just what I actually reach for.

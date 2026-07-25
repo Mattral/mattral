@@ -2,9 +2,9 @@
 
 # Mattral
 
-**ML Engineer · Distributed Training · LLM Systems · Computer Vision**
+**ML Systems Engineer · Distributed Training · LLM Infrastructure · Computer Vision**
 
-*I build things that work at scale -- and try to understand why they work at all.*
+*I build systems that work at scale — and try to understand why they fail when they do.*
 
 </div>
 
@@ -14,7 +14,7 @@
 
 I work in the space between clean research ideas and the messy reality of clusters that fail, data that drifts, and models that need to stay honest in production.
 
-Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training systems, fault-tolerant checkpointing, LLM safety layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
+Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training systems, fault-tolerant checkpointing, LLM safety and observability layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
 
 **Things I care about technically**
 - Large-scale pre-training infrastructure -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
@@ -58,11 +58,13 @@ Not everything is a shipped tool -- some of it is just a question I wanted a rea
 
 ## Selected Open Source Contributions
 
+These are small but high-signal fixes in core infrastructure projects:
+
 | Project       | Status                  | What was fixed / improved                                      | Link |
 |---------------|-------------------------|----------------------------------------------------------------|------|
-| **Triton**    | Merged                  | Fixed NaN handling in `tl.argmin`/`tl.argmax` (`tie_break_left=False`) in the interpreter so it matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) |
+| **Triton**    | Merged                  | Fixed NaN handling in `tl.argmin`/`tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) |
 | **Megatron-LM** | Merged                | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) |
-| **TensorFlow** | Approved by reviewers | `tf.experimental.numpy.swapaxes` now raises clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
+| **TensorFlow** | Approved                | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
 
 ---
 
@@ -98,7 +100,7 @@ That said: the repositories here are written to the same standard I use privatel
 
 I'm especially interested in the kinds of failures that only appear at real cluster scale, the practical trade-offs in LLM safety systems, and whether architectures like KANs will eventually find meaningful production use cases.
 
-My path into this wasn't linear -- it started in mechatronics, building things with real sensors, actuators, and control loops that fail in ways no unit test catches, and later working on ML systems within offshore energy's integrated control and safety systems, where a silent failure has real consequences. That's the actual root of the reliability obsession above, not something picked up from a style guide.
+My path into this wasn't linear -- it started in mechatronics, building things with real sensors, actuators, and control loops that fail in ways no unit test catches, and later working on ML systems within offshore energy's integrated control and safety systems, where a silent failure has real consequences. That's the actual root of the reliability focus you see in these projects.
 
 ---
 
@@ -173,7 +175,6 @@ $$\mathbf{h}_t = \sigma\!\left(\mathbf{W}_h\,\mathbf{h}_{t-1} + \mathbf{W}_x\,\m
 
 <br>
 
-*Open to interesting conversations about distributed training, LLM infrastructure,*
-*or any hard ML systems problem worth losing sleep over.*
+*Open to conversations about distributed training, LLM infrastructure, reliability at scale, or any hard ML systems problem worth careful engineering.*
 
 </div>

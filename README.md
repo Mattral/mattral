@@ -2,7 +2,7 @@
 
 # Mattral
 
-**ML Systems Engineer · Distributed Training · LLM Infrastructure · Computer Vision**
+**ML Systems Engineer · Distributed Training · LLM Infrastructure · Multimodal Systems**
 
 *I build systems that work at scale — and try to understand why they fail when they do.*
 

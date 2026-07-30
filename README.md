@@ -64,7 +64,7 @@ These are small but high-signal fixes in core infrastructure projects:
 |---------------|-------------------------|----------------------------------------------------------------|------|
 | **Triton**    | Merged                  | Fixed NaN handling in `tl.argmin`/`tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) |
 | **Megatron-LM** | Merged                | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) |
-| **TensorFlow** | Approved                | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
+| **TensorFlow** | Merged                | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
 
 ---
 

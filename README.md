@@ -4,7 +4,7 @@
 
 **ML Systems Engineer · Distributed Training · LLM Infrastructure · Multimodal Systems**
 
-*I build systems that work at scale — and try to understand why they fail when they do.*
+*I build systems that work at scale -- and try to understand why they fail when they do.*
 
 </div>
 
@@ -92,6 +92,25 @@ Not a comprehensive list. Just what I actually reach for.
 
 ---
 
+## Problem-solving
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku&hide_border=true" />
+    </td>
+  </tr>
+</table>
+
+>
+> *Algorithms are how I warm up. Systems are where I live.*
+>
+</div>
+
+---
+
 ## A few honest notes
 
 Most of my interesting work happens in private repositories -- production systems at cloud scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
@@ -112,48 +131,6 @@ My path into this wasn't linear -- it started in mechatronics, building things w
 
 ---
 
-## Problem-solving
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku&hide_border=true" />
-    </td>
-  </tr>
-</table>
-
->
-> *Algorithms are how I warm up. Systems are where I live.*
->
-
-<br><br>
-| | |
-|:--:|:--:|
-| <video src="https://github.com/user-attachments/assets/0aa09936-7d49-463b-8a9d-7389ad4626c3" width="480" controls loop muted playsinline></video> | <img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" /> |
-<!-- https://github.com/user-attachments/assets/0d3282d2-809f-4a47-a5c3-deb43e249453 -->
-<!-- img src="profile-3d-contrib/profile-night-view.svg" alt="3D contribution graph" width="100%" /> -->
-</div>
-
----
-
-## On the equation that changed everything
-
-<div align="center">
-
-$$\mathbf{h}_t = \sigma\!\left(\mathbf{W}_h\,\mathbf{h}_{t-1} + \mathbf{W}_x\,\mathbf{x}_t + \mathbf{b}\right)$$
-
-*The idea that a machine could hold memory across time --*
-*that the past could shape the present through nothing more than a weight matrix --*
-*was the moment I understood why this field is worth a lifetime.*
-
-*The equation is simple. What it implies is not.*
-
-</div>
-
----
-
 ## 🎶 Current frequency
 
 <div align="center">
@@ -169,12 +146,3 @@ $$\mathbf{h}_t = \sigma\!\left(\mathbf{W}_h\,\mathbf{h}_{t-1} + \mathbf{W}_x\,\m
 > Outside of work I'm usually reading something I don't fully understand yet,
 > listening to music that has no business being that good, and occasionally wondering if the model actually converged or if I just got lucky. I like working with people who say "I don't know" without embarrassment and argue about architecture in good faith.
 
-<div align="center">
-
-**[mattralminn@gmail.com](mailto:mattralminn@gmail.com)**
-
-<br>
-
-*Open to conversations about distributed training, LLM infrastructure, reliability at scale, or any hard ML systems problem worth careful engineering.*
-
-</div>

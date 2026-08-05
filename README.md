@@ -14,7 +14,7 @@
 
 I work in the space between clean research ideas and the messy reality of clusters that fail, data that drifts, and models that need to stay honest in production.
 
-Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training systems, fault-tolerant checkpointing, LLM safety and observability layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
+Day-to-day: cloud-scale ML infrastructure, distributed training systems, fault-tolerant checkpointing, LLM safety and observability layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
 
 **Things I care about technically**
 - Large-scale pre-training infrastructure -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
@@ -29,105 +29,66 @@ Day-to-day: cloud-scale ML infrastructure at a hyperscaler, distributed training
 
 ---
 
+## Upstream contributions
+
+These are small but high-signal fixes in core infrastructure:
+
+| Project | Status | What was fixed | Link |
+|---------|--------|----------------|------|
+| **Triton** | Merged | Fixed NaN handling in `tl.argmin` / `tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) · [write-up](https://medium.com/@mattral-lifelong-learning/debugging-nan-semantics-between-tritons-interpreter-and-jit-f2e03084d8c8) |
+| **TensorFlow** | Merged | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) · [write-up](https://www.towardsdeeplearning.com/same-input-two-outcomes-debugging-a-silent-eager-xla-divergence-in-tensorflow-ee207832e866) |
+| **Megatron-LM** | Merged | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) · [write-up](https://medium.com/@mattral-lifelong-learning/a-silent-crash-in-megatron-lms-gradient-clipping-and-a-reviewer-who-made-my-fix-better-da1a772a38dc) |
+
+---
+
 ## Selected work
-> Most of these exist because I needed to solve something concrete.
+
 > I'd rather have a few things that are real than many that just look good on a profile.
 
 | Project | What it is | Where it actually stands |
-|---------|------------|---------------------------|
-| **[Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine)** — [write-up: part I](https://medium.com/@mattral-lifelong-learning/i-built-a-fault-tolerant-moe-training-engine-from-scratch-heres-what-i-learned-explained-simply-4df162f96e3a) · [part II](https://medium.com/@mattral-lifelong-learning/moe-engine-part-ii-i-promised-real-gpu-numbers-81001bc12fd7) | Training runtime for large Mixture-of-Experts models at hyperscale. Fused Triton top-k router, composable 4D parallelism (DP+EP+TP+PP), strict forward-pass invariants, elastic fault tolerance, async two-tier checkpointing with automatic expert resharding, chaos testing. | Validated on real hardware, not just simulated: **80.1× (T4)** and **58.7× (A100)** kernel speedup, **348 tests**, three hardware-only bugs found and documented. Multi-GPU (8×A100/8×H100) validation in progress. [![Cite](https://img.shields.io/badge/Cite-DOI-brightgreen?style=flat&logo=readthedocs&logoColor=white)](https://doi.org/10.5281/zenodo.20688837) |
-| **[KANX](https://github.com/Mattral/KANX)** -- [write-up →](https://medium.com/@mattral-lifelong-learning/i-rebuilt-kan-networks-for-production-what-i-learned-391fd55914e0) | Kolmogorov-Arnold Networks library with PyTorch + TensorFlow backends, verified ONNX export, Docker + Kubernetes + Helm support, FastAPI serving. | `pip install kanx` · **5,000+ downloads** [![Downloads](https://img.shields.io/pepy/dt/kanx?style=flat&color=F87171)](https://pepy.tech/project/kanx) [![Cite](https://img.shields.io/badge/Cite-DOI-brightgreen?style=flat&logo=readthedocs&logoColor=white)](https://doi.org/10.5281/zenodo.20615396) |
-| **[guardrail-rs](https://github.com/Mattral/guardrail-rs)** -- [write-up →](https://medium.com/@mattral-lifelong-learning/building-guardrail-rs-a-production-llm-security-proxy-in-rust-and-six-bugs-that-taught-me-more-dba8713cf6b3) | Zero-Python LLM security layer written in Rust. Reverse-proxy that blocks prompt injection, redacts PII, and enforces policy with sub-millisecond overhead. Fails open by design, hot-reloadable config, Docker/K8s ready. | Active. Six real bugs found and written up honestly -- see the write-up. Complements [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio). |
-| **[FlashSpec](https://github.com/Mattral/FlashSpec)** -- [write-up →](https://medium.com/@mattral-lifelong-learning/i-built-speculative-decoding-from-a-scratch-heres-what-actually-broke-370cd7f7bb1f) | Adaptive speculative decoding engine with online bandit draft selection and Triton-optimised on-device verification. Preserves target distribution exactly. | `pip install flashspec` [![Downloads](https://img.shields.io/pepy/dt/flashspec?style=flat&color=F87171)](https://pepy.tech/project/flashspec) [![Cite](https://img.shields.io/badge/Cite-DOI-brightgreen?style=flat&logo=readthedocs&logoColor=white)](https://doi.org/10.5281/zenodo.20766119) |
-| **[mcp-reliable](https://github.com/Mattral/mcp-reliable)** | Runtime observability and reliability for the MCP ecosystem -- watches MCP servers *while they're running*: health checks, a traffic-observing proxy, schema/output drift detection, webhook + Slack alerting, and an agent-facing MCP interface so an agent can query its own tool reliability directly. CLI + REST API + dashboard, SQLite storage. | **v1.0.0** · **195 tests, none mocked at the protocol level** · architecture fully documented via ADRs. |
-| **[ReliableAgent](https://github.com/Mattral/ReliableAgent)** | Reliability-first orchestration framework for agentic systems. Plan → execute → critique → replan loop with guardrails at every boundary, full trajectory reconstruction, checkpoint/resume, quantitative reliability metrics. | v0.2.0 (June 19, 2026) · **140 tests** |
-| **[production-vlm-engineering](https://github.com/Mattral/production-vlm-engineering)** | Reproducible pipelines for modern multimodal vision systems: efficient VLM adaptation, embedding-space drift detection, edge inference, robustness & safety. | Active. |
-| **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** | Multimodal RAG system for financial documents -- hybrid retrieval, VLM chart understanding, numeric grounding, full observability + CI-gated evaluation. | Active, finance-domain focused. |
-| **[PromptCanary](https://github.com/Mattral/promptcanary)** -- [write-up →](https://medium.com/@mattral-lifelong-learning/we-built-promptcanary-to-detect-silent-llm-drift-heres-what-building-it-actually-taught-us-396478713d66) | Detects silent LLM drift. [<img src="https://img.shields.io/badge/Open_in_Colab-Notebooks-7C3AED?style=flat&logo=googlecolab&logoColor=white" alt="Open Notebooks in Colab" width="120">](https://github.com/Mattral/PromptCanary/tree/main/notebooks) | [v0.2.2](https://github.com/Mattral/PromptCanary/releases/tag/v0.2.2) |
-
+|---------|------------|--------------------------|
+| **[KANX](https://github.com/Mattral/KANX)** | Production-oriented Kolmogorov-Arnold Networks library (PyTorch + TensorFlow + ONNX) | `pip install kanx` · [![Downloads](https://img.shields.io/pepy/dt/kanx?style=flat&color=F87171)](https://pepy.tech/project/kanx) · [Colab](https://colab.research.google.com/github/Mattral/KANX/blob/main/notebooks/quickstart.ipynb) · [write-up](https://medium.com/@mattral-lifelong-learning/i-rebuilt-kan-networks-for-production-what-i-learned-391fd55914e0) · [DOI](https://doi.org/10.5281/zenodo.20615396) |
+| **[Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine)** | Fault-tolerant MoE training runtime with fused Triton router, 4D parallelism, elastic recovery, and async checkpointing | **80.1× (T4)** / **58.7× (A100)** kernel speedup · 348 tests · three hardware-only bugs documented · multi-GPU validation in progress · [DOI](https://doi.org/10.5281/zenodo.20688837) |
+| **[guardrail-rs](https://github.com/Mattral/guardrail-rs)** | Zero-Python LLM security reverse proxy in Rust (prompt injection, PII redaction, policy enforcement) | Sub-ms overhead · fails open by design · six real bugs written up · [Colab](https://colab.research.google.com/github/Mattral/guardrail-rs/blob/main/examples/notebooks/quickstart_colab.ipynb) · [write-up](https://www.towardsdeeplearning.com/building-guardrail-rs-a-production-llm-security-proxy-in-rust-and-six-bugs-that-taught-me-more-dba8713cf6b3) |
+| **[FlashSpec](https://github.com/Mattral/FlashSpec)** | Adaptive speculative decoding with online bandit draft selection and Triton verification | `pip install flashspec` · [![Downloads](https://img.shields.io/pepy/dt/flashspec?style=flat&color=F87171)](https://pepy.tech/project/flashspec) · [notebooks](https://github.com/Mattral/FlashSpec/tree/main/notebooks) |
+| **[PromptCanary](https://github.com/Mattral/PromptCanary)** | Detects silent behavioral drift in LLM providers | `pip install promptcanary` · [![Downloads](https://img.shields.io/pepy/dt/promptcanary?style=flat&color=F87171)](https://pepy.tech/project/promptcanary) · [notebooks](https://github.com/Mattral/PromptCanary/tree/main/notebooks) |
 
 ---
 
-## Also digging into
+## Other work
 
-Not everything is a shipped tool -- some of it is just a question I wanted a real answer to.
-
-- **Does fine-tuning break a transformer's copy mechanism?** [Write-up →](https://medium.com/@mattral-lifelong-learning/what-i-learned-studying-whether-fine-tuning-breaks-a-transformers-copy-mechanism-31700e58f3aa)
-
----
-
-## Selected Open Source Contributions
-
-These are small but high-signal fixes in core infrastructure projects:
-
-| Project       | Status                  | What was fixed / improved                                      | Link |
-|---------------|-------------------------|----------------------------------------------------------------|------|
-| **Triton**    | Merged                  | Fixed NaN handling in `tl.argmin`/`tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) |
-| **Megatron-LM** | Merged                | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) |
-| **TensorFlow** | Merged                | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) |
+- **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** -- Multimodal RAG for financial documents (hybrid retrieval, VLM chart understanding, numeric grounding)
+- **[production-vlm-engineering](https://github.com/Mattral/production-vlm-engineering)** -- Reproducible pipelines for modern multimodal vision systems
+- **[mcp-reliable](https://github.com/Mattral/mcp-reliable)** -- Runtime observability for MCP servers (195 tests, none mocked at protocol level)
+- **[ReliableAgent](https://github.com/Mattral/ReliableAgent)** -- Reliability-first agent orchestration
 
 ---
 
 ## Stack
 
-Not a comprehensive list. Just what I actually reach for.
-
-**Training & inference** &nbsp;
-`PyTorch` `TensorFlow` `Triton` `ONNX` `TensorRT` `FSDP2` `TorchElastic`
-
-**LLM ecosystem** &nbsp;
-`Transformers` `PEFT / LoRA` `vLLM` `LangChain` `FastAPI` `Triton Inference Server`
-
-**Distributed & infra** &nbsp;
-`NCCL` `Kubernetes` `Helm` `Terraform` `Airflow` `Ray`
-
-**Observability** &nbsp;
-`Prometheus` `Grafana` `OpenTelemetry` `Weights & Biases`
-
-**Low-level** &nbsp;
-`C++` `AVX2 / SIMD` `CUDA` `pybind11`
-
-**Data** &nbsp;
-`PostgreSQL` `Qdrant` `MongoDB` `Spark` `Dask`
-
----
-
-## Problem-solving
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku&hide_border=true" />
-    </td>
-  </tr>
-</table>
-
->
-> *Algorithms are how I warm up. Systems are where I live.*
->
-</div>
+**Training & inference** -- `PyTorch` `TensorFlow` `Triton` `ONNX` `TensorRT` `FSDP2`  
+**LLM** -- `Transformers` `PEFT` `vLLM` `FastAPI`  
+**Infra** -- `NCCL` `Kubernetes` `Helm` `Ray`  
+**Observability** -- `Prometheus` `Grafana` `OpenTelemetry`  
+**Low-level** -- `C++` `CUDA` `SIMD` `pybind11`
 
 ---
 
 ## A few honest notes
 
-Most of my interesting work happens in private repositories -- production systems at cloud scale where open-sourcing isn't an option. This GitHub is a public window, not the full picture.
+Most of my interesting work happens in private repositories. This GitHub is a public window, not the full picture.
 
-That said: the repositories here are written to the same standard I use privately: tests, type checking, CI, real (if limited) benchmarks, and documentation that tries to admit what doesn't work yet. When something is experimental or incomplete, the README says so.
+The repositories here are written to the same standard I use privately: tests, type checking, CI, real (if limited) benchmarks, and documentation that tries to admit what doesn’t work yet.
 
-I'm especially interested in the kinds of failures that only appear at real cluster scale, the practical trade-offs in LLM safety systems, and whether architectures like KANs will eventually find meaningful production use cases.
-
-My path into this wasn't linear -- it started in mechatronics, building things with real sensors, actuators, and control loops that fail in ways no unit test catches, and later working on ML systems within offshore energy's integrated control and safety systems, where a silent failure has real consequences. That's the actual root of the reliability focus you see in these projects.
+My path into this wasn’t linear. It started in mechatronics -- building systems with real sensors, actuators, and control loops that fail in ways no unit test catches -- and later working on ML systems inside industrial control and safety environments, where a silent failure has real consequences. That background is the root of the reliability focus you see in these projects.
 
 ---
 
 ## Currently
 
-- **Working on:** the MoE engine's chaos scenario A -- sudden node failure under expert resharding, currently recovering ~85% of the time
+- **Working on:** the MoE engine’s chaos scenario A -- sudden node failure under expert resharding (currently recovering ~85% of the time)
 - **Reading:** the Megatron-LM codebase and the FlexAttention paper
-- **Thinking about:** whether MFU tracking gives you enough signal to catch silent training degradation early
+- **Thinking about:** whether MFU tracking gives enough signal to catch silent training degradation early
 
 ---
 
@@ -143,6 +104,4 @@ My path into this wasn't linear -- it started in mechatronics, building things w
 
 ---
 
-> Outside of work I'm usually reading something I don't fully understand yet,
-> listening to music that has no business being that good, and occasionally wondering if the model actually converged or if I just got lucky. I like working with people who say "I don't know" without embarrassment and argue about architecture in good faith.
-
+> Outside of work I’m usually reading something I don’t fully understand yet, listening to music that has no business being that good, and occasionally wondering if the model actually converged or if I just got lucky. I like working with people who say “I don’t know” without embarrassment and argue about architecture in good faith.

@@ -35,7 +35,7 @@ These are small but high-signal fixes in core infrastructure:
 
 | Project | Status | What was fixed | Link |
 |---------|--------|----------------|------|
-| **Triton** | Merged | Fixed NaN handling in `tl.argmin` / `tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) · [write-up](https://medium.com/@mattral-lifelong-learning/debugging-nan-semantics-between-tritons-interpreter-and-jit-f2e03084d8c8) |
+| **Triton** | Merged | Fixed NaN handling in `tl.argmin` / `tl.argmax` so interpreter matches JIT behavior | [PR #10699](https://github.com/triton-lang/triton/pull/10699) · [write-up](https://pub.towardsai.net/inside-pr-10699-how-a-missing-elif-let-nan-win-in-tritons-interpreter-0f6321531d7f?source=friends_link&sk=dfbf6c7f9762f48e30f56085bfe17d40) |
 | **TensorFlow** | Merged | `tf.experimental.numpy.swapaxes` now raises a clear error on out-of-bounds axis instead of silent normalization or opaque XLA errors | [PR #122544](https://github.com/tensorflow/tensorflow/pull/122544) · [write-up](https://www.towardsdeeplearning.com/same-input-two-outcomes-debugging-a-silent-eager-xla-divergence-in-tensorflow-ee207832e866) |
 | **Megatron-LM** | Merged | Fixed crash in `get_grad_norm_fp32` when gradient list is empty (common with frozen layers / tensor parallelism) | [PR #5530](https://github.com/NVIDIA/Megatron-LM/pull/5530) · [write-up](https://blog.devgenius.io/a-silent-crash-in-megatron-lms-gradient-clipping-and-a-reviewer-who-made-my-fix-better-da1a772a38dc) |
 

@@ -55,6 +55,14 @@ These are small but high-signal fixes in core infrastructure:
 
 ---
 
+## Also digging into
+
+Not everything is a shipped tool -- some of it is just a question I wanted a real answer to.
+
+- **Does fine-tuning break a transformer's copy mechanism?** [Write-up →](https://medium.com/towards-artificial-intelligence/what-i-learned-studying-whether-fine-tuning-breaks-a-transformers-copy-mechanism-31700e58f3aa)
+
+---
+
 ## Other work
 
 - **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** -- Multimodal RAG for financial documents (hybrid retrieval, VLM chart understanding, numeric grounding)

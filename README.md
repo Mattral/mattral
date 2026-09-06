@@ -82,6 +82,25 @@ Not everything is a shipped tool -- some of it is just a question I wanted a rea
 
 ---
 
+## Problem-solving
+
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://leetcard.jacoblin.cool/MattralDontGiveUp?theme=dark&font=Yuji%20Syuku&hide_border=true" />
+    </td>
+  </tr>
+</table>
+
+>
+> *Algorithms are how I warm up. Systems are where I live.*
+>
+</div>
+
+---
+
 ## A few honest notes
 
 Most of my interesting work happens in private repositories. This GitHub is a public window, not the full picture.

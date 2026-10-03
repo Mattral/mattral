@@ -14,8 +14,6 @@
 
 I work in the space between clean research ideas and the messy reality of clusters that fail, data that drifts, and models that need to stay honest in production.
 
-Day-to-day: cloud-scale ML infrastructure, distributed training systems, fault-tolerant checkpointing, LLM safety and observability layers, and the occasional low-level kernel when something needs to be faster or more reliable. The majority of that work lives in private repositories. What you see here are the side projects I chose to open-source because they felt worth sharing.
-
 **Things I care about technically**
 - Large-scale pre-training infrastructure -- MoE routing, fault-tolerant checkpointing, tensor/pipeline parallelism
 - LLM safety and observability -- keeping models (and the agents built on them) honest at inference time

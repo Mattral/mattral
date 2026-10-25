@@ -66,7 +66,7 @@ Not everything is a shipped tool -- some of it is just a question I wanted a rea
 - **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** -- Multimodal RAG for financial documents (hybrid retrieval, VLM chart understanding, numeric grounding)
 - **[production-vlm-engineering](https://github.com/Mattral/production-vlm-engineering)** -- Reproducible pipelines for modern multimodal vision systems
 - **[mcp-reliable](https://github.com/Mattral/mcp-reliable)** -- Runtime observability for MCP servers (195 tests, none mocked at protocol level)
-- **[ReliableAgent](https://github.com/Mattral/ReliableAgent)** -- Reliability-first agent orchestration
+
 
 ---
 

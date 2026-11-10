@@ -44,12 +44,13 @@ These are small but high-signal fixes in core infrastructure:
 > I'd rather have a few things that are real than many that just look good on a profile.
 
 | Project | What it is | Where it actually stands |
-|---------|------------|--------------------------|
-| **[KANX](https://github.com/Mattral/KANX)** | Production-oriented Kolmogorov-Arnold Networks library (PyTorch + TensorFlow + ONNX) | `pip install kanx` · [![Downloads](https://img.shields.io/pepy/dt/kanx?style=flat&color=F87171)](https://pepy.tech/project/kanx) · [Colab](https://colab.research.google.com/github/Mattral/KANX/blob/main/notebooks/quickstart.ipynb) · [write-up](https://blog.devgenius.io/i-rebuilt-kan-networks-for-production-what-i-learned-391fd55914e0) · [DOI](https://doi.org/10.5281/zenodo.20615396) |
-| **[Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine)** | Fault-tolerant MoE training runtime with fused Triton router, 4D parallelism, elastic recovery, and async checkpointing | **80.1× (T4)** / **58.7× (A100)** kernel speedup · 348 tests · three hardware-only bugs documented · multi-GPU validation in progress · [DOI](https://doi.org/10.5281/zenodo.20688837) |
-| **[guardrail-rs](https://github.com/Mattral/guardrail-rs)** | Zero-Python LLM security reverse proxy in Rust (prompt injection, PII redaction, policy enforcement) | Sub-ms overhead · fails open by design · six real bugs written up · [Colab](https://colab.research.google.com/github/Mattral/guardrail-rs/blob/main/examples/notebooks/quickstart_colab.ipynb) · [write-up](https://www.towardsdeeplearning.com/building-guardrail-rs-a-production-llm-security-proxy-in-rust-and-six-bugs-that-taught-me-more-dba8713cf6b3) · optional dashboard: [GuardRail Studio](https://github.com/Mattral/GuardRail-Studio) |
-| **[FlashSpec](https://github.com/Mattral/FlashSpec)** | Adaptive speculative decoding with online bandit draft selection and Triton verification | `pip install flashspec` · [![Downloads](https://img.shields.io/pepy/dt/flashspec?style=flat&color=F87171)](https://pepy.tech/project/flashspec) · [notebooks](https://github.com/Mattral/FlashSpec/tree/main/notebooks) |
-| **[PromptCanary](https://github.com/Mattral/PromptCanary)** | Detects silent behavioral drift in LLM providers | `pip install promptcanary` · [![Downloads](https://img.shields.io/pepy/dt/promptcanary?style=flat&color=F87171)](https://pepy.tech/project/promptcanary) · [notebooks](https://github.com/Mattral/PromptCanary/tree/main/notebooks) |
+| ------- | ---------- | ------------------------ |
+| **[KANX](https://github.com/Mattral/KANX)** | Production-oriented Kolmogorov-Arnold Networks library (PyTorch + TensorFlow + ONNX) | `pip install kanx` · [![Downloads](https://img.shields.io/pepy/dt/kanx?style=flat&color=F87171)](https://pepy.tech/project/kanx) · [Colab](https://colab.research.google.com/github/Mattral/KANX/blob/main/notebooks/quickstart.ipynb) · [write-up](https://blog.devgenius.io/i-rebuilt-kan-networks-for-production-what-i-learned-391fd55914e0) · [DOI](https://doi.org/10.5281/zenodo.20615396) · latest release v0.2.1 |
+| **[Composed-MoE-Engine](https://github.com/Mattral/Composed-Mixture-of-Experts-Engine)** | Fault-tolerant MoE training runtime with fused Triton router, 4D parallelism, elastic recovery, and async checkpointing | **80.1× (T4)** / **58.7× (A100)** kernel speedup · 348 tests · three hardware-only bugs documented · verified at 2-rank / single-GPU · multi-node still open |
+| **[filing-qa](https://github.com/Mattral/filing-qa)** | Question answering over financial filings with cited answers (hybrid dense+BM25, chart extraction, numeric guardrail, AST-sandboxed calculator) | FastAPI + CLI + Helm · 119-question golden set · no fabricated numbers on the set · ~30% still miss at retrieval |
+| **[guardrail-rs](https://github.com/Mattral/guardrail-rs)** | Zero-Python LLM security reverse proxy in Rust (prompt injection, PII redaction, policy enforcement) | Sub-ms overhead on the default path · fails open by design · five crates on crates.io · [Colab](https://colab.research.google.com/github/Mattral/guardrail-rs/blob/main/examples/notebooks/quickstart_colab.ipynb) · [write-up](https://www.towardsdeeplearning.com/building-guardrail-rs-a-production-llm-security-proxy-in-rust-and-six-bugs-that-taught-me-more-dba8713cf6b3) |
+| **[FlashSpec](https://github.com/Mattral/FlashSpec)** | Lossless speculative decoding for Hugging Face causal LMs with static-cache CUDA-graph fast path | `pip install flashspec` · [![Downloads](https://img.shields.io/pepy/dt/flashspec?style=flat&color=F87171)](https://pepy.tech/project/flashspec) · v0.3.2 · ≥1.5× over compiled HF generate on T4 (Qwen2.5, batch 1) · still Alpha · earlier bandit/Triton path retained as experimental |
+| **[simd-ml-kernels](https://github.com/Mattral/simd-ml-kernels)** | Hand-written AVX2/AVX-512/VNNI microkernels for core inference arithmetic | Runs Llama-3.2-1B end-to-end, token-identical to Hugging Face in FP32 · 1.02–1.69× llama.cpp on the same cores in measured configs · still loses to OpenBLAS/PyTorch in several cases · README lists every one |
 
 ---
 
@@ -63,9 +64,10 @@ Not everything is a shipped tool -- some of it is just a question I wanted a rea
 
 ## Other work
 
-- **[RAG-Multimodal-Financial-Doc-Analysis-and-Recall](https://github.com/Mattral/RAG-Multimodal-Financial-Doc-Analysis-and-Recall)** -- Multimodal RAG for financial documents (hybrid retrieval, VLM chart understanding, numeric grounding)
+- **[rlpost](https://github.com/Mattral/rlpost)** -- LLM post-training from scratch (SFT, reward model, PPO, DPO); parity-tested against TRL
 - **[production-vlm-engineering](https://github.com/Mattral/production-vlm-engineering)** -- Reproducible pipelines for modern multimodal vision systems
-- **[mcp-reliable](https://github.com/Mattral/mcp-reliable)** -- Runtime observability for MCP servers (195 tests, none mocked at protocol level)
+- **[mcp-reliable](https://github.com/Mattral/mcp-reliable)** -- Runtime observability for MCP servers (health, per-tool latency, output-shape drift)
+- **[PromptCanary](https://github.com/Mattral/PromptCanary)** -- Detects silent behavioral drift in LLM providers (`pip install promptcanary`)
 
 
 ---
@@ -111,7 +113,7 @@ My path into this wasn’t linear. It started in mechatronics -- building system
 
 ## Currently
 
-- **Working on:** the MoE engine’s chaos scenario A -- sudden node failure under expert resharding (currently recovering ~85% of the time)
+- **Working on:** the MoE engine’s chaos scenario A -- sudden node failure under expert resharding (still recovering ~85% of the time; Gloo race remains)
 - **Reading:** the Megatron-LM codebase and the FlexAttention paper
 - **Thinking about:** whether MFU tracking gives enough signal to catch silent training degradation early
 
